@@ -1,4 +1,4 @@
-// Copyright (c) 2005-2008 Oliver Lau <ola@ctmagazin.de>
+// Copyright (c) 2005-2011 Oliver Lau <ola@ct.de>
 // Heise Zeitschriften Verlag, Hannover, Germany
 
 #ifndef __HELPVIEWER_H_
@@ -14,18 +14,18 @@
 
 class HelpViewer : public QDialog
 {
-	Q_OBJECT
+    Q_OBJECT
 
 private: // variables
-	QTextEdit* textEdit;
-	QPushButton* buttonOK;
+    QTextEdit* textEdit;
+    QPushButton* buttonOK;
 
 public: // methods
-	HelpViewer(QWidget* parent = NULL);
-	~HelpViewer();
+    HelpViewer(QWidget* parent = NULL);
+    ~HelpViewer();
 
-	QSize sizeHint(void) const { return QSize(400, 600); }
-	QSize minimumSizeHint(void) const { return QSize(300, 200); }
+    QSize sizeHint(void) const { return QSize(400, 600); }
+    QSize minimumSizeHint(void) const { return QSize(300, 200); }
 };
 
 #endif // __HELPVIEWER_H_

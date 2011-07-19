@@ -1,4 +1,4 @@
-// Copyright (c) 2005-2008 Oliver Lau <ola@ctmagazin.de>
+// Copyright (c) 2005-2011 Oliver Lau <ola@ct.de>
 // Heise Zeitschriften Verlag, Hannover, Germany
 
 #if defined(__INTEL_COMPILER)
@@ -7,6 +7,7 @@
 #include "math.h"
 #endif
 
+#include <QtCore>
 #include <QPointF>
 
 #include "particle.h"
@@ -14,16 +15,20 @@
 #include "swarm.h"
 
 
-Particle::Particle(Swarm* swarm, const QPointF& p, bool rState)
-: swarm(swarm), currentPos(p), bestPos(p), v(0, 0), m_randomization(rState)
-{ }
+Particle::Particle(Swarm* swarm, const QPointF& p, bool rState) :
+        swarm(swarm),
+        currentPos(p),
+        bestPos(p),
+        v(0, 0),
+        m_randomization(rState)
+{ /* ... */ }
 
 
 void Particle::move(void)
 {
     QPointF distraction =
-        swarm->c1() * r() * (bestPos - currentPos) +
-        swarm->c2() * r() * (swarm->best() - currentPos);
+            swarm->c1() * r() * (bestPos - currentPos) +
+            swarm->c2() * r() * (swarm->best() - currentPos);
     v += distraction;
     double distance = sqrt(v.x() * v.x() + v.y() * v.y());
     if (distance > swarm->vMax())
@@ -55,6 +60,6 @@ const QPointF& Particle::pos(void) const
 double Particle::r(void)
 {
     return (m_randomization)
-        ? (double) rand() / (double) RAND_MAX
-        : 1.0;
+            ? (double) qrand() / (double) RAND_MAX
+                : 1.0;
 }

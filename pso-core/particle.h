@@ -1,8 +1,8 @@
-// Copyright (c) 2005-2008 Oliver Lau <ola@ctmagazin.de>
+// Copyright (c) 2005-2011 Oliver Lau <ola@ct.de>
 // Heise Zeitschriften Verlag, Hannover, Germany
 
-#ifndef _PARTICLE_H_
-#define _PARTICLE_H_
+#ifndef __PARTICLE_H_
+#define __PARTICLE_H_
 
 #include <QPointF>
 

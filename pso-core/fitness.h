@@ -1,8 +1,8 @@
-// Copyright (c) 2005-2008 Oliver Lau <ola@ctmagazin.de>
+// Copyright (c) 2005-2011 Oliver Lau <ola@ct.de>
 // Heise Zeitschriften Verlag, Hannover, Germany
 
-#ifndef _FITNESS_H_
-#define _FITNESS_H_
+#ifndef __FITNESS_H_
+#define __FITNESS_H_
 
 #if defined(__INTEL_COMPILER)
 #include <mathimf.h>
@@ -24,25 +24,25 @@
 struct FitnessParam
 {
 #ifdef USE_SSE2
-	SSE_ALIGNED union {
-		__m128d hw;
-		struct {
-			double h;
-			double w;
-		};
-	};
-	SSE_ALIGNED union {
-		__m128d xy;
-		struct {
-			double X;
-			double Y;
-		};
-	};
+    SSE_ALIGNED union {
+        __m128d hw;
+        struct {
+            double h;
+            double w;
+        };
+    };
+    SSE_ALIGNED union {
+        __m128d xy;
+        struct {
+            double X;
+            double Y;
+        };
+    };
 #else
-	double h;
-	double w;
-	double X;
-	double Y;
+    double h;
+    double w;
+    double X;
+    double Y;
 #endif
     FitnessParam(double H, double W, double x, double y)
         : h(H), w(W), X(x), Y(y)
@@ -55,36 +55,24 @@ struct FitnessParam
 class Fitness : public AbstractFitness<QPointF, double>
 {
 private: // variables
-	QList<FitnessParam> param;
+    QList<FitnessParam> param;
 
 public: // methods
     /// Constructor.
-	Fitness(void);
+    Fitness(void);
 
     /// This function is provided for convenience.
     /// @see f(const QPointF& p)
-    double operator() (const QPointF& p) const
-    {
-        return f(p);
-    }
+    inline double operator() (const QPointF& p) const { return f(p); }
+    double f(double x, double y) const;
+    inline double f(int x, int y) const { return f((double) x, (double) y); }
+    inline double f(const QPointF& p) const { return f(p.x(), p.y()); }
 
-	double f(double x, double y) const;
+    void addPeak(double h, double w, double X, double Y);
+    void deletePeak(double h, double w, double X, double Y);
+    double estimatedMax(void) const;
 
-	double f(int x, int y) const
-	{
-		return f((double) x, (double) y);
-	}
-
-	double f(const QPointF& p) const
-	{
-		return f(p.x(), p.y());
-	}
-
-	void addPeak(double h, double w, double X, double Y);
-	void deletePeak(double h, double w, double X, double Y);
-	double estimatedMax(void) const;
-
-	QList<FitnessParam>& params(void);
+    QList<FitnessParam>& params(void);
 
 };
 

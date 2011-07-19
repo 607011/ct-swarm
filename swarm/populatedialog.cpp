@@ -1,4 +1,4 @@
-// Copyright (c) 2005-2008 Oliver Lau <ola@ctmagazin.de>
+// Copyright (c) 2005-2011 Oliver Lau <ola@ct.de>
 // Heise Zeitschriften Verlag, Hannover, Germany
 
 #include <QObject>
@@ -8,23 +8,23 @@
 
 PopulateDialog::PopulateDialog(QWidget* parent) : QDialog(parent)
 {
-	ui.setupUi(this);
+    ui.setupUi(this);
 }
 
 
 int PopulateDialog::distribution(void) const
 {
-	if (ui.comboBoxDistribution->currentText() == tr("Even"))
-		return PopulateDialog::EvenDistribution;
-	else if (ui.comboBoxDistribution->currentText() == tr("Random"))
-		return PopulateDialog::RandomDistribution;
-	return PopulateDialog::UnknownDistribution;
+    if (ui.comboBoxDistribution->currentText() == tr("Even"))
+        return PopulateDialog::EvenDistribution;
+    else if (ui.comboBoxDistribution->currentText() == tr("Random"))
+        return PopulateDialog::RandomDistribution;
+    return PopulateDialog::UnknownDistribution;
 }
 
 
 int PopulateDialog::number(void) const
 {
-	return ui.spinBoxNumber->value();
+    return ui.spinBoxNumber->value();
 }
 
 
@@ -48,11 +48,11 @@ int PopulateDialog::distributionIndex(void) const
 
 void PopulateDialog::on_pushButtonOK_clicked()
 {
-	accept();
+    accept();
 }
 
 
 void PopulateDialog::on_pushButtonCancel_clicked()
 {
-	reject();
+    reject();
 }

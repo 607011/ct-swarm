@@ -1,4 +1,4 @@
-// Copyright (c) 2005-2008 Oliver Lau <ola@ctmagazin.de>
+// Copyright (c) 2005-2011 Oliver Lau <ola@ct.de>
 // Heise Zeitschriften Verlag, Hannover, Germany
 
 #include <QIODevice>
@@ -9,35 +9,35 @@
 
 HelpViewer::HelpViewer(QWidget* parent) : QDialog(parent)
 {
-  setWindowTitle(tr("Help on Particle Swarm Optimization"));
+    setWindowTitle(tr("Help on Particle Swarm Optimization"));
 
-  // create widgets
-  textEdit = new QTextEdit();
-  textEdit->setReadOnly(true);
-  QFile* in = new QFile(":/Resources/help.html");
-  in->open(QIODevice::ReadOnly);
-  QTextStream html(in);
-  textEdit->setHtml(html.readAll());
-  in->close();
-  delete in;
+    // create widgets
+    textEdit = new QTextEdit();
+    textEdit->setReadOnly(true);
+    QFile* in = new QFile(":/Resources/help.html");
+    in->open(QIODevice::ReadOnly);
+    QTextStream html(in);
+    textEdit->setHtml(html.readAll());
+    in->close();
+    delete in;
 
-  buttonOK = new QPushButton();
-  buttonOK->setText(tr("Close window"));
-  buttonOK->setMinimumSize(128, 24);
-  buttonOK->setMaximumSize(128, 24);
+    buttonOK = new QPushButton();
+    buttonOK->setText(tr("Close window"));
+    buttonOK->setMinimumSize(128, 24);
+    buttonOK->setMaximumSize(128, 24);
 
-  QVBoxLayout* vboxLayout = new QVBoxLayout(this);
+    QVBoxLayout* vboxLayout = new QVBoxLayout(this);
 
-  // fill layouts
-  vboxLayout->addWidget(textEdit);
-  vboxLayout->addWidget(buttonOK);
+    // fill layouts
+    vboxLayout->addWidget(textEdit);
+    vboxLayout->addWidget(buttonOK);
 
-  QObject::connect(buttonOK, SIGNAL(clicked()), this, SLOT(accept()));
+    QObject::connect(buttonOK, SIGNAL(clicked()), this, SLOT(accept()));
 }
 
 
 HelpViewer::~HelpViewer(void)
 {
-  delete buttonOK;
-  delete textEdit;
+    delete buttonOK;
+    delete textEdit;
 }

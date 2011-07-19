@@ -1,4 +1,4 @@
-// Copyright (c) 2005-2008 Oliver Lau <ola@ctmagazin.de>
+// Copyright (c) 2005-2011 Oliver Lau <ola@ct.de>
 // Heise Zeitschriften Verlag, Hannover, Germany
 
 #if defined (_OPENMP)
@@ -246,7 +246,7 @@ void ThreeDWidget::mousePressEvent(QMouseEvent* e)
 void ThreeDWidget::wheelEvent(QWheelEvent* e)
 {
     double increment = ((e->modifiers() & Qt::ShiftModifier) == Qt::ShiftModifier)
-        ? 0.025 : 0.2;
+                       ? 0.025 : 0.2;
     if (e->delta() < 0)
         zoom -= increment;
     else
@@ -258,7 +258,7 @@ void ThreeDWidget::wheelEvent(QWheelEvent* e)
 void ThreeDWidget::mouseMoveEvent(QMouseEvent* e)
 {
     int factor = ((e->modifiers() & Qt::ShiftModifier) == Qt::ShiftModifier)
-        ? 1 : 8;
+                 ? 1 : 8;
     int dx = e->x() - lastPos.x();
     int dy = e->y() - lastPos.y();
     if ((e->buttons() & Qt::LeftButton) == Qt::LeftButton) {

@@ -1,4 +1,4 @@
-// Copyright (c) 2005-2008 Oliver Lau <ola@ctmagazin.de>
+// Copyright (c) 2005-2011 Oliver Lau <ola@ct.de>
 // Heise Zeitschriften Verlag, Hannover, Germany
 
 #ifndef __ZFINDER_H_
@@ -15,35 +15,35 @@
 
 class ZFinder :	public QDialog
 {
-	Q_OBJECT
+    Q_OBJECT
 
 private: // variables
-	QSlider* slider;
-	QPushButton* buttonOK;
-	QPushButton* buttonCancel;
-	QLineEdit* lineEdit;
+    QSlider* slider;
+    QPushButton* buttonOK;
+    QPushButton* buttonCancel;
+    QLineEdit* lineEdit;
 
 private slots:
-	void sliderChanged(int v);
+    void sliderChanged(int v);
 
 public: // methods
-	ZFinder(QWidget* parent = 0);
-	~ZFinder(void) {};
+    ZFinder(QWidget* parent = 0);
+    ~ZFinder(void) {}
 
-	QSize sizeHint(void) const
-	{
-		return QSize(160, 100);
-	}
+    QSize sizeHint(void) const
+    {
+        return QSize(160, 100);
+    }
 
-	QSize minimumSizeHint(void) const
-	{
-		return QSize(155, 80);
-	}
+    QSize minimumSizeHint(void) const
+    {
+        return QSize(155, 80);
+    }
 
-	int value(void) const
-	{
-		return slider->value();
-	}
+    int value(void) const
+    {
+        return slider->value();
+    }
 
 };
 

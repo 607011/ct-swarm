@@ -28,6 +28,9 @@ RESOURCES = \
 TRANSLATIONS = \
 	swarm-de_DE.ts
 
+QMAKE_CXXFLAGS += -fopenmp
+LIBS += -lgomp
+
 DESTDIR = ../debug
 
 MOC_DIR = ./GeneratedFiles/debug
