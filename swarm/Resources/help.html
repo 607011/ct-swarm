@@ -1,0 +1,127 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Kurzhilfe zum Demo-Programm "Partikelschwarmoptimierung"</title>
+    </head>
+    <body>
+        <h1>Kurzhilfe zur PSO-Demo</h1>
+        <h2>In der 3D-Ansicht</h2>
+
+        <h3>Tasten</h3>
+        <table cellpadding="4" cellspacing="0" border="1">
+            <tr>
+                <th>
+                    Taste</th>
+                <th>
+                    Funktion</th>
+            </tr>
+            <tr>
+                <td align="center">1</td>
+                <td>Landschaft als Punktwolke darstellen</td>
+            </tr>
+            <tr>
+                <td align="center">2</td>
+                <td>Landschaft als Polygonfläche darstellen</td>
+            </tr>
+            <tr>
+                <td align="center">3</td>
+                <td>Landschaft als Gitternetz darstellen</td>
+            </tr>
+            <tr>
+                <td align="center">Q</td>
+                <td>Partikel als Punkte darstellen</td>
+            </tr>
+            <tr>
+                <td align="center">W</td>
+                <td>Partikel als Leuchtkugel darstellen</td>
+            </tr>
+            <tr>
+                <td align="center">E</td>
+                <td>Partikel als Oktaeder darstellen</td>
+            </tr>
+            <tr>
+                <td align="center">Cursor links/rechts</td>
+                <td>entlang der X-Achse verschieben</td>
+            </tr>
+            <tr>
+                <td align="center">Cursor rauf/runter</td>
+                <td>entlang der Y-Achse verschieben</td>
+            </tr>
+            <tr>
+                <td align="center">Seite rauf/runter</td>
+                <td>entlang der Z-Achse verschieben</td>
+            </tr>
+            <tr>
+                <td align="center">Esc</td>
+                <td>Starteinstellungen wiederherstellen</td>
+            </tr>
+        </table>
+
+        <h3>Maus</h3>
+        <table cellpadding="4" cellspacing="0" border="1">
+            <tr>
+                <th>
+                    Mausbewegung<sup>*</sup></th>
+                <th>
+                    Mausknopf</th>
+                <th>
+                    Funktion</th>
+            </tr>
+            <tr>
+                <td align="center">rauf/runter</td>
+                <td align="center">links</td>
+                <td>Rotation um Y-Achse</td>
+            </tr>
+            <tr>
+                <td align="center">links/rechts</td>
+                <td align="center">links</td>
+                <td>Rotation um X-Achse</td>
+            </tr>
+            <tr>
+                <td align="center">&nbsp;</td>
+                <td align="center">Scrollrad</td>
+                <td>Zoom</td>
+            </tr>
+            <tr>
+                <td colspan="3"><span style="font-size:smaller">*) Drücken der Umschalt-Taste während der Mausbewegung
+                        verlangsamt das Drehen/Zoomen</span></td>
+            </tr>
+        </table>
+
+        <h2>Einstellungen</h2>
+
+        <table cellpadding="4" cellspacing="0" border="1">
+            <tr>
+                <td>W</td>
+                <td>Faktor für Betrag des Geschwindigkeitsvektors (Vorgabewert: 1.0)</td>
+            </tr>
+            <tr>
+                <td>C1</td>
+                <td>Je höher C1, umso stärker berücksichtigt ein Partikel bei der Bewegung die Position, an der es die höchste Güte erzielen konnte. Im Regelfall ist C1&nbsp;=&nbsp;C2&nbsp;=&nbsp;2.</td>
+            </tr>
+            <tr>
+                <td>C2</td>
+                <td>Je höher C2, umso stärker berücktsichtigt ein Partikel bei der Bewegung die Position des Partikels mit der aktuell höchsten Güte. Im Regelfall ist C1&nbsp;=&nbsp;C2&nbsp;=&nbsp;2.</td>
+            </tr>
+            <tr>
+                <td>Geschwindigkeit</td>
+                <td>Die maximale Geschwindigkeit (eigentlich Sprungweite in Pixeln), mit der ein Partikel unterwegs sein darf.</td>
+            </tr>
+            <tr>
+                <td>Stop bei Trendabflachung</td>
+                <td>Der Schwarm hält an, sobald die Gütetrend abflacht</td>
+            </tr>
+            <tr>
+                <td>Vollautomatisch</td>
+                <td>Reduziert die maximale Geschwindigkeit bei jeder Iteration um 10 Prozent (bis herab zu 0,5), wenn die Differenz zwischen aktueller höchster Güte und den höchsten Güte aus der vorangegangenen Iteration unter einer bestimmten Schwelle liegt.</td>
+            </tr>
+            <tr>
+                <td>Zappelnde Partikel</td>
+                <td>Bringt gewollte Unruhe ins System, indem C1 und C2 bei jeder Iteration mit einem Zufallswert gewichtet werden.</td>
+            </tr>
+        </table>
+
+        <hr/>
+        <p>Copyright &copy; 2005-2008 Heise Zeitschriften Verlag, Oliver Lau
+            &lt;ola@ctmagazin.de&gt;. Alle Rechte vorbehalten.</p>
+    </body>
+</html>

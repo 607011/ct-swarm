@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>Resources/Particle.bmp</file>
+        <file>Resources/filenew.png</file>
+        <file>Resources/fileopen.png</file>
+        <file>Resources/filesave.png</file>
+        <file>Resources/info.png</file>
+        <file>Resources/minus.png</file>
+        <file>Resources/particles.png</file>
+        <file>Resources/plus.png</file>
+        <file>Resources/populate.png</file>
+        <file>Resources/help.html</file>
+    </qresource>
+</RCC>

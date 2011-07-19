@@ -1,0 +1,126 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Brief help on the Particle Swarm Optimization demo</title>
+    </head>
+    <body>
+        <h1>Brief help on PSO demo</h1>
+        <h2>3D view</h2>
+
+        <h3>Keys</h3>
+        <table cellpadding="4" cellspacing="0" border="1">
+            <tr>
+                <th>
+                    Key</th>
+                <th>
+                    Function</th>
+            </tr>
+            <tr>
+                <td align="center">1</td>
+                <td>Display landscape with dots</td>
+            </tr>
+            <tr>
+                <td align="center">2</td>
+                <td>Display landscape with polygons</td>
+            </tr>
+            <tr>
+                <td align="center">3</td>
+                <td>Display landscape as a grid</td>
+            </tr>
+            <tr>
+                <td align="center">Q</td>
+                <td>Display particles as dots</td>
+            </tr>
+            <tr>
+                <td align="center">W</td>
+                <td>Display particles as tiny glimmering balls</td>
+            </tr>
+            <tr>
+                <td align="center">E</td>
+                <td>Display particles as octaeders</td>
+            </tr>
+            <tr>
+                <td align="center">Cursor left/right</td>
+                <td>move along x-axis</td>
+            </tr>
+            <tr>
+                <td align="center">Cursor up/down</td>
+                <td>move along y-axis</td>
+            </tr>
+            <tr>
+                <td align="center">Page up/down</td>
+                <td>move along z-axis</td>
+            </tr>
+            <tr>
+                <td align="center">Esc</td>
+                <td>Reset to defaults</td>
+            </tr>
+        </table>
+
+        <h3>Mouse</h3>
+        <table cellpadding="4" cellspacing="0" border="1">
+            <tr>
+                <th>
+                    Mouse movement<sup>*</sup></th>
+                <th>
+                    Mouse button</th>
+                <th>
+                    Function</th>
+            </tr>
+            <tr>
+                <td align="center">up/down</td>
+                <td align="center">left</td>
+                <td>Rotate around y-axis</td>
+            </tr>
+            <tr>
+                <td align="center">left/right</td>
+                <td align="center">left</td>
+                <td>Rotate around x-axis</td>
+            </tr>
+            <tr>
+                <td align="center">&nbsp;</td>
+                <td align="center">wheel</td>
+                <td>Zoom</td>
+            </tr>
+            <tr>
+                <td colspan="3"><span style="font-size:smaller">*) Holding the shift key while moving the mouse slows down rotation/zooming</span></td>
+            </tr>
+        </table>
+
+        <h2>Settings</h2>
+
+        <table cellpadding="4" cellspacing="0" border="1">
+            <tr>
+                <td>W</td>
+                <td>Inertia weight (default: 1.0)</td>
+            </tr>
+            <tr>
+                <td>C1</td>
+                <td>The higher C1, the more a particle likes to move back to its own best position. Usually C1&nbsp;=&nbsp;C2&nbsp;=&nbsp;2.</td>
+            </tr>
+            <tr>
+                <td>C2</td>
+                <td>The higher C2, the more a particle is attracted by the globally best particle. Usually C1&nbsp;=&nbsp;C2&nbsp;=&nbsp;2.</td>
+            </tr>
+            <tr>
+                <td>Velocity</td>
+                <td>The maximum particles' velocity (practically the maximum distance for a particle's single hop).</td>
+            </tr>
+            <tr>
+                <td>Stop on stagnation</td>
+                <td>The swarm comes to a halt automatically, if the fitness trend is flattening</td>
+            </tr>
+            <tr>
+                <td>Fully automatic</td>
+                <td>Reduce maximum velocity by 10 per cent with each iteration (down to 0.5), if the difference between the current fitness of the best particle and its former fitness lies below a certain threshold.</td>
+            </tr>
+            <tr>
+                <td>Randomize movement</td>
+                <td>Disturbe the particles system by weighting C1 and C2 with a random value at each iteration.</td>
+            </tr>
+        </table>
+
+        <hr/>
+        <p>Copyright &copy; 2005-2008 Heise Zeitschriften Verlag, Oliver Lau
+            &lt;ola@ctmagazin.de&gt;. All rights reserved.</p>
+    </body>
+</html>

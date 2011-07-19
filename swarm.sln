@@ -1,0 +1,45 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{816FED8A-E05A-472F-85B3-20E3E1D1C095}"
+	GlobalSection(Qt) = preSolution
+		Integration = True
+	EndGlobalSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pso-core", "pso-core\pso-core.vcproj", "{C37931FC-F116-42BB-A843-7FC016803692}"
+	GlobalSection(Qt) = preSolution
+		Integration = True
+	EndGlobalSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "swarm", "swarm\swarm.vcproj", "{2E69EF09-9FA1-43A7-ABC3-3C04A1A487F7}"
+	GlobalSection(Qt) = preSolution
+		Integration = True
+	EndGlobalSection
+	ProjectSection(ProjectDependencies) = postProject
+		{C37931FC-F116-42BB-A843-7FC016803692} = {C37931FC-F116-42BB-A843-7FC016803692}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(Qt) = preSolution
+		Integration = True
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{816FED8A-E05A-472F-85B3-20E3E1D1C095}.Debug|Win32.ActiveCfg = Debug
+		{816FED8A-E05A-472F-85B3-20E3E1D1C095}.Release|Win32.ActiveCfg = Release
+		{816FED8A-E05A-472F-85B3-20E3E1D1C095}.Release|Win32.Build.0 = Release
+		{C37931FC-F116-42BB-A843-7FC016803692}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C37931FC-F116-42BB-A843-7FC016803692}.Debug|Win32.Build.0 = Debug|Win32
+		{C37931FC-F116-42BB-A843-7FC016803692}.Release|Win32.ActiveCfg = Release|Win32
+		{C37931FC-F116-42BB-A843-7FC016803692}.Release|Win32.Build.0 = Release|Win32
+		{2E69EF09-9FA1-43A7-ABC3-3C04A1A487F7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2E69EF09-9FA1-43A7-ABC3-3C04A1A487F7}.Debug|Win32.Build.0 = Debug|Win32
+		{2E69EF09-9FA1-43A7-ABC3-3C04A1A487F7}.Release|Win32.ActiveCfg = Release|Win32
+		{2E69EF09-9FA1-43A7-ABC3-3C04A1A487F7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
